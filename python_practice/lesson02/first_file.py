@@ -1,1 +1,1 @@
-print("Hello world some another text")
+print("Hello world from first_file")
