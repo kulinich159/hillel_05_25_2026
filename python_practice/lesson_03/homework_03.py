@@ -17,6 +17,7 @@ print(alice_in_wonderland)
     # на мову пітон і виведіть відповідь, так, щоб було
     # зрозуміло дитині, що навчається в п'ятому класі
 """
+
 # task 04
 """
 Площа Чорного моря становить 436 402 км2, а площа Азовського
@@ -27,7 +28,6 @@ square_of_black_see = 436402
 square_of_azov_see = 37800
 
 print(f"Площа Чорного та Азовського морів: {square_of_black_see + square_of_azov_see} км2")
-
 
 # task 05
 """
@@ -43,7 +43,6 @@ second_storage = all_goods_in_storages - first_storage - third_storage
 
 print(f"На 1 складі розміщено: {first_storage} товар, на 2 складі: {second_storage} товарів, "
       f"на 3 складі: {third_storage} товари")
-
 
 # task 06
 """
