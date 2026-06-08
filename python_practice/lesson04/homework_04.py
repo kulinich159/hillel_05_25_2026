@@ -1,3 +1,5 @@
+from operator import index
+
 adwentures_of_tom_sawer = """\
 Tom gave up the brush with reluctance in his .... face but alacrity
 in his heart. And while
@@ -94,3 +96,76 @@ list_of_words_in_last_sentence = adwentures_of_tom_sawer_sentences[-1].split(" "
 
 print(f"Кількість слів в останньому реченні - {len(list_of_words_in_last_sentence)}.")
 
+"""
+Задача. Розділення логу 
+Умова:
+
+На вхід функції потрапляють строки лог-файлу виду:
+
+```
+
+2023-04-27 15:30:45 - TestCase: login_successful
+
+2023-04-27 15:35:12 - TestCase: invalid_password
+
+```
+
+Після строки 'TestCase: ' іде назва тесту.
+
+Зробити так, щоб функця виводила лише назву тесту.
+
+Увага! Замість print у функії використовуйте return.
+"""
+
+def solution(test_string):
+    find_test_case = test_string.find("TestCase:")
+    separated_test_string = test_string.split(" - ")
+    if find_test_case != -1:
+        new_text = separated_test_string[1].replace("TestCase: ", "")
+        return new_text
+    else:
+        return separated_test_string[1]
+
+
+
+print(solution("2023-04-27 15:30:45 - TestCase: login_successful"))
+print(solution("2023-04-27 15:35:12 - TestCase: invalid_password"))
+print(solution("2023-04-27 15:30:45 - test PASS"))
+
+
+def check_file_format(file_list: list, extention: str):
+    new_list = []
+    str_list = str(file_list)
+    str_list_exist = str_list.replace("'","").lstrip("[").rstrip("]").split(", ")
+    for element in str_list_exist:
+        if str(element).find(str(extention)) != -1 :
+            new_list.append(element)
+
+
+    # for element in str_list:
+    #     new_list.append(element)
+
+    return new_list
+
+
+
+print(check_file_format( ["a.txt", "b.txt", "c.log", "d.html", "e.log", ".diff"], ".txt"))
+print(check_file_format(["a.txt", "b.txt", "c.log", "d.html", "e.log", ".diff"],".log"))
+print(check_file_format(["a.txt", "b.txt", "c.log", "d.html", "e.log", ".diff"], ".json"))
+
+
+def change_params(old_value:str, new_value:str):
+    filetext = """\
+    screen_size = 800x600
+    paralel_processes = 10
+    db_conection = localhost:5432"""
+
+    filetext = filetext.replace(old_value, new_value)
+
+    return filetext
+
+
+
+print(change_params("screen_size = 800x600","screen_size = 1024x800"))
+print(change_params("paralel_processes = 10","paralel_processes = 3"))
+print(change_params("",""))
