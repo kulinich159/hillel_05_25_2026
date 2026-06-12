@@ -13,4 +13,3 @@ if unique_chars > 10:
     print(more_than_ten_elements)
 else:
     print(less_than_ten_elements)
-
