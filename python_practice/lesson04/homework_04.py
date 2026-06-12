@@ -124,7 +124,7 @@ def solution(test_string):
         new_text = separated_test_string[1].replace("TestCase: ", "")
         return new_text
     else:
-        return separated_test_string[1]
+        return test_string
 
 
 
