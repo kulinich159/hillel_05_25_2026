@@ -1,3 +1,4 @@
+import random
 # task 1
 """ Задача - надрукувати табличку множення на задане число, але
 лише до максимального значення для добутку - 25.
@@ -127,7 +128,7 @@ def find_string_values_in_list(user_list):
 print(find_string_values_in_list(['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum']))
 
 # task 10
-import random
+
 
 def count_sum_of_even_numbers(user_list):
     """
