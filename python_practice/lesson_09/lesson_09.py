@@ -84,24 +84,31 @@ point2 = Point(3, 4)
 result = point1 + point2
 print(result.x, result.y)  # Виведе: 4 6
 
-# class Classes:
-#     def __init__(self, **kwargs):
-#         for k,v in kwargs.items():
-#             setattr(self, k, v)
-#
-#     def __add__(self, other):
-#         for k,v in other.__dict__.items():
-#             setattr(self, k, v)
-#
-#
-#     def __str__(self):
-#         result = f"current classes\n"
-#
-#         for k,v in self.__dict__.items():
-#             result += f"{k} has students: {v['students']}, start at {v['start']}\n"
-#             setattr(self, k,v)
-#         return result
-#
-# class1 = Classes({"name": "John", "name1": "John1"})
-#
-# print(class1)
+class Classes:
+    def __init__(self, **kwargs):
+        for k,v in kwargs.items():
+            setattr(self, k, v)
+
+    def __add__(self, other):
+        for k,v in other.__dict__.items():
+            setattr(self, k, v)
+
+    def __str__(self):
+        result11 = f"current classes\n"
+
+        for k,v in self.__dict__.items():
+            result11 += f"{k} has students: {v['students']}, start at {v['start']}\n"
+            setattr(self, k,v)
+        return result11
+
+class_one = Classes(**{"math":{"students": "100", "start": "11/10/2026"}})
+
+print(class_one)
+
+class_second = Classes(**{"phil":{"students": "80", "start": "11/10/2026"}})
+print(class_second)
+
+class_one + class_second
+print(class_one)
+
+print(class_one.__dict__) # повертає всі атрибути інтстансу у вигляді словника
