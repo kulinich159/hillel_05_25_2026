@@ -14,9 +14,10 @@ class Developer(Employee):
         super().__init__(name, salary)
 
 class TeamLead(Manager, Developer):
-    def __init__(self, team_size, name, salary, department):
+    def __init__(self, team_size, name, salary, department, programming_language):
         self.team_size = team_size
         Manager.__init__(self, name, salary, department)
+        Developer.__init__(self, name, salary, programming_language)
 
     def __str__(self):
         return (f"Розробник {self.name}, є лідером команди з '{self.team_size}' {self.programming_language} розробників"
@@ -33,7 +34,7 @@ def check_if_attribute_present(obj):
 
 print(TeamLead.mro())
 
-teamleader = TeamLead(23, "Alex", 987654, "R&D")
+teamleader = TeamLead(23, "Alex", 987654, "R&D", "C++")
 print(teamleader)
 
 check_if_attribute_present(teamleader)

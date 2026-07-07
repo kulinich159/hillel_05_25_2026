@@ -12,36 +12,33 @@ class Figure(ABC):
 
 class Quadrature(Figure):
     def __init__(self, side_length):
-        self.side_length = side_length
-        self.name = "Квадрат"
+        self.__side_length = side_length
 
     def perimeter(self):
-        return 4 * self.side_length
+        return 4 * self.__side_length
 
     def square(self):
-        return self.side_length**2
+        return self.__side_length**2
 
 class Equilateral_triangle(Figure):
     def __init__(self, side_length):
-        self.side_length = side_length
-        self.name = "Рівносторонній трикутник"
+        self.__side_length = side_length
 
     def perimeter(self):
-        return 3 * self.side_length
+        return 3 * self.__side_length
 
     def square(self):
-        return (self.side_length**2 * (3**(1/2))) / 4
+        return (self.__side_length**2 * (3**(1/2))) / 4
 
 class Circle(Figure):
     def __init__(self, radius):
-        self.radius = radius
-        self.name = "Коло"
+        self.__radius = radius
 
     def perimeter(self):
-        return 2 * 3.14 * self.radius
+        return 2 * 3.14 * self.__radius
 
     def square(self):
-        return 3.14 * self.radius**2
+        return 3.14 * self.__radius**2
 
 quadrature = Quadrature(3)
 equilateral_triangle = Equilateral_triangle(6)
@@ -49,4 +46,4 @@ circle = Circle(54)
 
 figures = [quadrature , equilateral_triangle, circle]
 for figure in figures:
-    print(f"{figure.name}: Периметр = {figure.perimeter()}, Площа = {figure.square()}")
+    print(f"{figure.__class__.__name__}: Периметр = {figure.perimeter()}, Площа = {figure.square()}")
