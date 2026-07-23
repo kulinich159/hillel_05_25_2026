@@ -110,3 +110,27 @@ def parse_logs(some_list):
 
 
 parse_logs(logs)
+
+filename1 = "data.txt"
+
+
+
+def calculate_sum_from_file(filename):
+    try:
+        with open(filename) as file:
+            log_content = file.read()
+            print(log_content.split(",\n"))
+            print(type(log_content))
+            try:
+                chars_sum = sum(int(x) for x in log_content.split(",\n"))
+                return chars_sum
+            except ValueError:
+                return "Invalid data in the file"
+            except TypeError:
+                return "Invalid type of data in the file"
+    except FileNotFoundError:
+        return "File not found"
+
+
+
+print(calculate_sum_from_file(filename1))
