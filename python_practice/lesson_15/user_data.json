@@ -1,0 +1,20 @@
+[
+    {
+        "name": "John",
+        "age": 30,
+        "city": "New York",
+        "is_active": true
+    },
+    {
+        "name": "Alex",
+        "age": 45,
+        "city": "New York1",
+        "is_active": false
+    },
+    {
+        "name": "Ivan",
+        "age": 67,
+        "city": "New York2",
+        "has_friends": null
+    }
+]
