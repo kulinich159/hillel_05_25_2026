@@ -1,7 +1,5 @@
 import csv
 
-unique_rows = set()
-result_rows = []
 
 def add_unique_rows(filename):
     with open(filename, 'r') as file:
