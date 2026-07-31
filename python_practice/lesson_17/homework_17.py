@@ -110,10 +110,10 @@ adding_to_new_list(list_of_numbers)
 Декоратори:
 2. Створіть декоратор, який перехоплює та обробляє винятки, які виникають в ході виконання функції..
 '''
-def cath_exceptions(function):
+def catch_exceptions(function):
     def wrapper(*args, **kwargs):
         try:
-            function(*args, **kwargs)
+            return function(*args, **kwargs)
         except Exception as exception:
             logging.error(f"During running function '{function.__name__}' was exception: {exception}")
     return wrapper
