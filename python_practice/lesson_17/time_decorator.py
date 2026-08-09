@@ -15,7 +15,7 @@ def time_checker(function):
 @time_checker
 def send_request_to_db():
     print("sending request")
-    time.sleep(random.choice(range(5)))
+    time.sleep(random.choice(range(2)))
 
 for _ in range(5):
     send_request_to_db()
