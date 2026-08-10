@@ -1,0 +1,5 @@
+2026-08-09 19:02:27,880 - ERROR - { Trade (101, len 36) Queue 0 PriceClass 1 Timestamp 04:50:42 Key TSTFEED0300|7E3E|0400 TradePrice 5 TradeSize 0 }
+2026-08-09 19:02:27,882 - ERROR - { Trade (101, len 36) Queue 0 PriceClass 1 Timestamp 03:38:36 Key TSTFEED0300|7E3E|0400 TradePrice 5 TradeSize 0 }
+2026-08-09 19:02:27,883 - ERROR - { Trade (101, len 36) Queue 0 PriceClass 1 Timestamp 02:26:30 Key TSTFEED0300|7E3E|0400 TradePrice 5 TradeSize 0 }
+2026-08-09 19:02:27,884 - WARNING - { Trade (101, len 36) Queue 0 PriceClass 1 Timestamp 01:34:38 Key TSTFEED0300|7E3E|0400 TradePrice 5 TradeSize 0 }
+2026-08-09 19:02:27,885 - ERROR - { Trade (101, len 36) Queue 0 PriceClass 1 Timestamp 01:14:23 Key TSTFEED0300|7E3E|0400 TradePrice 5 TradeSize 0 }
